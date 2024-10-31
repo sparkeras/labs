@@ -1,0 +1,11 @@
+; example 2
+	LDX #$00
+	LDA #$0A
+lab01:
+	STA $0200,X
+	INX
+	CPX #$FF
+	BEQ lab02
+	JMP lab01
+lab02:
+	BRK
